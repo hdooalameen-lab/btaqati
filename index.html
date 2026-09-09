@@ -1,0 +1,2338 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>  <meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+«»
+
+  <title>بطاقتي | اصنع أجمل التهاني</title>  <!-- الخط العربي -->  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    :root {
+
+      --primary: #7c3aed;
+      --primary-dark: #5b21b6;
+
+      --pink: #ec4899;
+      --blue: #2563eb;
+
+      --dark: #1e1b4b;
+      --text: #374151;
+
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: "Cairo", sans-serif;
+
+      color: var(--text);
+
+      overflow-x: hidden;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #fdf2f8 0%,
+          #f5f3ff 45%,
+          #eff6ff 100%
+        );
+
+    }
+
+
+    /* =========================
+       الخلفية
+    ========================= */
+
+    .background {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: -5;
+
+      overflow: hidden;
+
+      pointer-events: none;
+
+    }
+
+
+    .blob {
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      filter: blur(20px);
+
+      opacity: 0.55;
+
+      animation:
+
+        floatBlob
+        10s
+        ease-in-out
+        infinite;
+
+    }
+
+
+    .blob-one {
+
+      width: 350px;
+      height: 350px;
+
+      background: #f9a8d4;
+
+      top: -120px;
+      right: -100px;
+
+    }
+
+
+    .blob-two {
+
+      width: 420px;
+      height: 420px;
+
+      background: #c4b5fd;
+
+      bottom: -180px;
+      left: -150px;
+
+      animation-delay: 2s;
+
+    }
+
+
+    .blob-three {
+
+      width: 250px;
+      height: 250px;
+
+      background: #93c5fd;
+
+      top: 45%;
+      left: -120px;
+
+      animation-delay: 4s;
+
+    }
+
+
+    @keyframes floatBlob {
+
+      0%,
+      100% {
+
+        transform:
+          translate(0, 0)
+          scale(1);
+
+      }
+
+
+      50% {
+
+        transform:
+          translate(30px, -40px)
+          scale(1.1);
+
+      }
+
+    }
+
+
+    /* =========================
+       الهيدر
+    ========================= */
+
+    header {
+
+      width: min(92%, 1150px);
+
+      margin: 20px auto;
+
+      padding: 15px 20px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          0.72
+        );
+
+      backdrop-filter:
+        blur(18px);
+
+      border:
+
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.9
+        );
+
+      border-radius: 24px;
+
+      box-shadow:
+
+        0 20px 50px
+        rgba(
+          76,
+          29,
+          149,
+          0.08
+        );
+
+      position: relative;
+
+      z-index: 10;
+
+    }
+
+
+    .logo {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+    }
+
+
+    .logo-icon {
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 18px;
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 27px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--pink)
+        );
+
+      box-shadow:
+
+        0 10px 25px
+        rgba(
+          124,
+          58,
+          237,
+          0.25
+        );
+
+    }
+
+
+    .logo h1 {
+
+      font-size: 21px;
+
+      color: var(--dark);
+
+      font-weight: 900;
+
+    }
+
+
+    .logo p {
+
+      font-size: 11px;
+
+      color: #6b7280;
+
+      margin-top: 2px;
+
+    }
+
+
+    nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 22px;
+
+    }
+
+
+    nav a {
+
+      text-decoration: none;
+
+      color: #4b5563;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.25s;
+
+    }
+
+
+    nav a:hover {
+
+      color: var(--primary);
+
+    }
+
+
+    .nav-button {
+
+      border: none;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      font-weight: 800;
+
+      padding: 11px 18px;
+
+      border-radius: 14px;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--pink)
+        );
+
+      box-shadow:
+
+        0 10px 25px
+        rgba(
+          124,
+          58,
+          237,
+          0.25
+        );
+
+      transition: 0.3s;
+
+    }
+
+
+    .nav-button:hover {
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .menu-button {
+
+      display: none;
+
+      border: none;
+
+      background: transparent;
+
+      font-size: 26px;
+
+      cursor: pointer;
+
+    }
+
+
+    .container {
+
+      width: min(92%, 1150px);
+
+      margin: auto;
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+      min-height: 580px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      align-items: center;
+
+      gap: 40px;
+
+      padding:
+        50px 0
+        70px;
+
+    }
+
+
+    .hero-text {
+
+      animation:
+        fadeUp
+        1s
+        ease;
+
+    }
+
+
+    .hero-badge {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding:
+        8px 14px;
+
+      border-radius: 30px;
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          0.7
+        );
+
+      color: var(--primary);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .hero h2 {
+
+      font-size:
+        clamp(
+          35px,
+          6vw,
+          62px
+        );
+
+      line-height: 1.35;
+
+      color: var(--dark);
+
+      font-weight: 900;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .hero h2 span {
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--pink)
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color: transparent;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 560px;
+
+      line-height: 2;
+
+      font-size: 16px;
+
+      color: #6b7280;
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .hero-buttons {
+
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .primary-button {
+
+      border: none;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      padding:
+        15px 24px;
+
+      border-radius: 17px;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--pink)
+        );
+
+      box-shadow:
+
+        0 15px 30px
+        rgba(
+          124,
+          58,
+          237,
+          0.25
+        );
+
+      transition: 0.3s;
+
+    }
+
+
+    .primary-button:hover {
+
+      transform:
+        translateY(-3px);
+
+    }
+
+
+    .secondary-button {
+
+      border:
+
+        1px solid
+        rgba(
+          124,
+          58,
+          237,
+          0.15
+        );
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      padding:
+        15px 24px;
+
+      border-radius: 17px;
+
+      color: var(--primary);
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          0.75
+        );
+
+      transition: 0.3s;
+
+    }
+
+
+    .secondary-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      background: white;
+
+    }
+
+
+    /* =========================
+       البطاقة الرئيسية
+    ========================= */
+
+    .hero-card-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      animation:
+        fadeUp
+        1.2s
+        ease;
+
+    }
+
+
+    .hero-card {
+
+      width: 100%;
+
+      max-width: 420px;
+
+      min-height: 460px;
+
+      border-radius: 35px;
+
+      padding: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #4c1d95,
+          #7c3aed,
+          #ec4899
+        );
+
+      box-shadow:
+
+        0 35px 70px
+        rgba(
+          76,
+          29,
+          149,
+          0.3
+        );
+
+      transform:
+        rotate(-3deg);
+
+      transition: 0.4s;
+
+    }
+
+
+    .hero-card:hover {
+
+      transform:
+
+        rotate(0deg)
+        translateY(-8px);
+
+    }
+
+
+    .card-circle {
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.12
+        );
+
+    }
+
+
+    .circle-a {
+
+      width: 250px;
+      height: 250px;
+
+      top: -120px;
+      right: -100px;
+
+    }
+
+
+    .circle-b {
+
+      width: 180px;
+      height: 180px;
+
+      bottom: -80px;
+      left: -70px;
+
+    }
+
+
+    .hero-card-content {
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .big-icon {
+
+      font-size: 65px;
+
+      margin-bottom: 20px;
+
+      animation:
+
+        pulseIcon
+        3s
+        ease-in-out
+        infinite;
+
+    }
+
+
+    .hero-card h3 {
+
+      font-size: 20px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .hero-card h4 {
+
+      font-size: 42px;
+
+      font-weight: 900;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .hero-card p {
+
+      line-height: 2;
+
+      font-size: 15px;
+
+      max-width: 320px;
+
+    }
+
+
+    @keyframes pulseIcon {
+
+      0%,
+      100% {
+
+        transform:
+          scale(1);
+
+      }
+
+
+      50% {
+
+        transform:
+
+          scale(1.12)
+          rotate(5deg);
+
+      }
+
+    }
+
+
+    @keyframes fadeUp {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(35px);
+
+      }
+
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =========================
+       الأقسام
+    ========================= */
+
+    .section {
+
+      padding:
+        70px 0;
+
+    }
+
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .section-title span {
+
+      color: var(--primary);
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+    }
+
+
+    .section-title h2 {
+
+      margin-top: 8px;
+
+      font-size:
+
+        clamp(
+          28px,
+          5vw,
+          42px
+        );
+
+      color: var(--dark);
+
+      font-weight: 900;
+
+    }
+
+
+    .section-title p {
+
+      margin-top: 12px;
+
+      color: #6b7280;
+
+      line-height: 2;
+
+    }
+
+
+    /* =========================
+       المناسبات
+    ========================= */
+
+    .occasion-grid {
+
+      display: grid;
+
+      grid-template-columns:
+
+        repeat(
+          4,
+          1fr
+        );
+
+      gap: 16px;
+
+    }
+
+
+    .occasion-card {
+
+      border: none;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      padding:
+        25px 12px;
+
+      border-radius: 25px;
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          0.72
+        );
+
+      border:
+
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
+
+      transition: 0.3s;
+
+    }
+
+
+    .occasion-card:hover {
+
+      transform:
+
+        translateY(-8px)
+        scale(1.03);
+
+      box-shadow:
+
+        0 20px 35px
+        rgba(
+          76,
+          29,
+          149,
+          0.12
+        );
+
+    }
+
+
+    .occasion-emoji {
+
+      font-size: 40px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .occasion-card h3 {
+
+      color: var(--dark);
+
+      font-size: 14px;
+
+    }
+
+
+    /* =========================
+       الخطوات
+    ========================= */
+
+    .steps-grid {
+
+      display: grid;
+
+      grid-template-columns:
+
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 20px;
+
+    }
+
+
+    .step {
+
+      padding:
+        30px 22px;
+
+      border-radius: 28px;
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          0.72
+        );
+
+      border:
+
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.9
+        );
+
+      box-shadow:
+
+        0 15px 35px
+        rgba(
+          76,
+          29,
+          149,
+          0.06
+        );
+
+    }
+
+
+    .step-number {
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 15px;
+
+      margin-bottom: 18px;
+
+      color: white;
+
+      font-weight: 900;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--pink)
+        );
+
+    }
+
+
+    .step h3 {
+
+      color: var(--dark);
+
+      margin-bottom: 10px;
+
+      font-size: 18px;
+
+    }
+
+
+    .step p {
+
+      color: #6b7280;
+
+      line-height: 2;
+
+      font-size: 14px;
+
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+
+      margin:
+        30px 0
+        70px;
+
+      padding:
+        55px 25px;
+
+      border-radius: 35px;
+
+      text-align: center;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #4c1d95,
+          #7c3aed,
+          #db2777
+        );
+
+      box-shadow:
+
+        0 25px 60px
+        rgba(
+          76,
+          29,
+          149,
+          0.25
+        );
+
+    }
+
+
+    .cta h2 {
+
+      font-size:
+
+        clamp(
+          28px,
+          5vw,
+          42px
+        );
+
+      margin-bottom: 15px;
+
+      font-weight: 900;
+
+    }
+
+
+    .cta p {
+
+      line-height: 2;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .cta button {
+
+      border: none;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      font-weight: 900;
+
+      font-size: 15px;
+
+      padding:
+        15px 25px;
+
+      border-radius: 17px;
+
+      color: var(--primary);
+
+      background: white;
+
+      transition: 0.3s;
+
+    }
+
+
+    .cta button:hover {
+
+      transform:
+
+        translateY(-3px)
+        scale(1.03);
+
+    }
+
+
+    footer {
+
+      padding:
+        25px 10px 40px;
+
+      text-align: center;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+    }
+
+
+    /* =========================
+       الهاتف
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav {
+
+        position: absolute;
+
+        top: 80px;
+
+        right: 0;
+        left: 0;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        background: white;
+
+        border-radius: 20px;
+
+        display: none;
+
+        box-shadow:
+
+          0 20px 40px
+          rgba(
+            0,
+            0,
+            0,
+            0.1
+          );
+
+      }
+
+
+      nav.active {
+
+        display: flex;
+
+      }
+
+
+      .menu-button {
+
+        display: block;
+
+      }
+
+
+      .nav-button {
+
+        width: 100%;
+
+      }
+
+
+      .hero {
+
+        grid-template-columns:
+          1fr;
+
+        text-align: center;
+
+      }
+
+
+      .hero-description {
+
+        margin-right: auto;
+
+        margin-left: auto;
+
+      }
+
+
+      .hero-buttons {
+
+        justify-content: center;
+
+      }
+
+
+      .hero-card {
+
+        transform:
+          rotate(0);
+
+      }
+
+
+      .occasion-grid {
+
+        grid-template-columns:
+
+          repeat(
+            3,
+            1fr
+          );
+
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .occasion-grid {
+
+        grid-template-columns:
+
+          repeat(
+            2,
+            1fr
+          );
+
+      }
+
+
+      .steps-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .hero {
+
+        min-height: auto;
+
+      }
+
+
+      .hero-card {
+
+        min-height: 400px;
+
+      }
+
+
+      .hero-card h4 {
+
+        font-size: 35px;
+
+      }
+
+    }
+
+
+    @media (max-width: 450px) {
+
+      header {
+
+        padding:
+          12px 14px;
+
+      }
+
+
+      .primary-button,
+      .secondary-button {
+
+        width: 100%;
+
+      }
+
+    }
+
+  </style></head><body>  <!-- الخلفية -->  <div class="background"><div class="blob blob-one"></div>
+
+<div class="blob blob-two"></div>
+
+<div class="blob blob-three"></div>
+
+  </div>  <!-- الهيدر -->  <header><div class="logo">
+
+
+  <div class="logo-icon">
+    💌
+  </div>
+
+
+  <div>
+
+    <h1>
+      بطاقتي
+    </h1>
+
+    <p>
+      اصنع تهنئة لا تُنسى
+    </p>
+
+  </div>
+
+
+</div>
+
+
+
+<button
+  class="menu-button"
+  id="menuButton"
+  type="button"
+>
+  ☰
+</button>
+
+
+
+<nav id="navMenu">
+
+
+  <a href="#home">
+    الرئيسية
+  </a>
+
+
+  <a href="#occasions">
+    المناسبات
+  </a>
+
+
+  <a href="#how">
+    كيف يعمل؟
+  </a>
+
+
+  <a href="#about">
+    عن الموقع
+  </a>
+
+
+  <button
+    class="nav-button"
+    id="startButton"
+    type="button"
+  >
+    ✨ أنشئ بطاقتك
+  </button>
+
+
+</nav>
+
+  </header>  <main
+    class="container"
+    id="home"
+  ><!-- HERO -->
+
+<section class="hero">
+
+
+  <div class="hero-text">
+
+
+    <div class="hero-badge">
+      ✨ اصنع لحظة جميلة لمن تحب
+    </div>
+
+
+    <h2>
+
+      لأن الكلمات الجميلة
+      تستحق
+      <span>
+        بطاقة جميلة
+      </span>
+      ❤️
+
+    </h2>
+
+
+    <p class="hero-description">
+
+      أنشئ بطاقة تهنئة خاصة بك بسهولة،
+      اختر المناسبة واكتب كلماتك الجميلة
+      ثم خصص بطاقتك بصورة وتصميم مميز.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+
+      <button
+        class="primary-button"
+        id="heroCreateButton"
+        type="button"
+      >
+
+        💌 أنشئ بطاقتي الآن
+
+      </button>
+
+
+      <button
+        class="secondary-button"
+        id="exploreButton"
+        type="button"
+      >
+
+        🎨 استكشف المناسبات
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="hero-card-container">
+
+
+    <div class="hero-card">
+
+
+      <div
+        class="card-circle circle-a"
+      ></div>
+
+
+      <div
+        class="card-circle circle-b"
+      ></div>
+
+
+      <div class="hero-card-content">
+
+
+        <div class="big-icon">
+          🎉
+        </div>
+
+
+        <h3>
+          تهنئة خاصة إلى
+        </h3>
+
+
+        <h4>
+          شخص مميز ❤️
+        </h4>
+
+
+        <p>
+
+          لأن وجودك في حياتنا جميل،
+          نتمنى لك أياماً مليئة بالسعادة
+          والفرح وتحقيق الأمنيات.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- المناسبات -->
+
+<section
+  class="section"
+  id="occasions"
+>
+
+
+  <div class="section-title">
+
+
+    <span>
+      🎊 اختر مناسبتك
+    </span>
+
+
+    <h2>
+      لكل مناسبة بطاقة مميزة
+    </h2>
+
+
+    <p>
+      اختر المناسبة التي تريد إنشاء بطاقة لها
+    </p>
+
+
+  </div>
+
+
+
+  <div class="occasion-grid">
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="birthday"
+    >
+
+      <div class="occasion-emoji">
+        🎂
+      </div>
+
+      <h3>
+        عيد ميلاد
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="graduation"
+    >
+
+      <div class="occasion-emoji">
+        🎓
+      </div>
+
+      <h3>
+        تخرج
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="success"
+    >
+
+      <div class="occasion-emoji">
+        🌟
+      </div>
+
+      <h3>
+        نجاح
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="wedding"
+    >
+
+      <div class="occasion-emoji">
+        💍
+      </div>
+
+      <h3>
+        زواج
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="engagement"
+    >
+
+      <div class="occasion-emoji">
+        💎
+      </div>
+
+      <h3>
+        خطوبة
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="anniversary"
+    >
+
+      <div class="occasion-emoji">
+        🥰
+      </div>
+
+      <h3>
+        ذكرى سنوية
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="newbaby"
+    >
+
+      <div class="occasion-emoji">
+        👶
+      </div>
+
+      <h3>
+        مولود جديد
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="newyear"
+    >
+
+      <div class="occasion-emoji">
+        🎆
+      </div>
+
+      <h3>
+        رأس السنة
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="eid"
+    >
+
+      <div class="occasion-emoji">
+        🌙
+      </div>
+
+      <h3>
+        عيد مبارك
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="ramadan"
+    >
+
+      <div class="occasion-emoji">
+        🕌
+      </div>
+
+      <h3>
+        رمضان كريم
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="mother"
+    >
+
+      <div class="occasion-emoji">
+        🌷
+      </div>
+
+      <h3>
+        عيد الأم
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="father"
+    >
+
+      <div class="occasion-emoji">
+        💙
+      </div>
+
+      <h3>
+        عيد الأب
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="love"
+    >
+
+      <div class="occasion-emoji">
+        ❤️
+      </div>
+
+      <h3>
+        حب ورومانسية
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="thanks"
+    >
+
+      <div class="occasion-emoji">
+        🙏
+      </div>
+
+      <h3>
+        شكر وتقدير
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="getwell"
+    >
+
+      <div class="occasion-emoji">
+        🌹
+      </div>
+
+      <h3>
+        سلامتك
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="welcome"
+    >
+
+      <div class="occasion-emoji">
+        🎈
+      </div>
+
+      <h3>
+        ترحيب
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="farewell"
+    >
+
+      <div class="occasion-emoji">
+        ✈️
+      </div>
+
+      <h3>
+        وداع وسفر
+      </h3>
+
+    </button>
+
+
+
+    <button
+      class="occasion-card"
+      type="button"
+      data-occasion="special"
+    >
+
+      <div class="occasion-emoji">
+        💖
+      </div>
+
+      <h3>
+        تهنئة خاصة
+      </h3>
+
+    </button>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- كيف يعمل -->
+
+<section
+  class="section"
+  id="how"
+>
+
+
+  <div class="section-title">
+
+
+    <span>
+      ✨ خطوات بسيطة
+    </span>
+
+
+    <h2>
+      اصنع بطاقتك في دقائق
+    </h2>
+
+
+  </div>
+
+
+
+  <div class="steps-grid">
+
+
+    <div class="step">
+
+
+      <div class="step-number">
+        ١
+      </div>
+
+
+      <h3>
+        اختر المناسبة
+      </h3>
+
+
+      <p>
+        اختر نوع المناسبة التي تريد إنشاء تهنئة خاصة لها.
+      </p>
+
+
+    </div>
+
+
+
+    <div class="step">
+
+
+      <div class="step-number">
+        ٢
+      </div>
+
+
+      <h3>
+        اكتب وخصص
+      </h3>
+
+
+      <p>
+        أضف الاسم والرسالة واختر التصميم المناسب لبطاقتك.
+      </p>
+
+
+    </div>
+
+
+
+    <div class="step">
+
+
+      <div class="step-number">
+        ٣
+      </div>
+
+
+      <h3>
+        احفظ وشارك
+      </h3>
+
+
+      <p>
+        احفظ البطاقة كصورة وشاركها مع من تحب.
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section
+  class="cta"
+  id="about"
+>
+
+
+  <h2>
+    جاهزة لصنع أول بطاقة؟ 💌
+  </h2>
+
+
+  <p>
+    اجعل كلماتك الجميلة أكثر تميزاً
+    مع بطاقة مصممة خصيصاً لك.
+  </p>
+
+
+  <button
+    type="button"
+    id="bottomCreateButton"
+  >
+    ✨ ابدأ الآن
+  </button>
+
+
+</section>
+
+  </main>  <footer>صُنع بكل ❤️ باستخدام HTML • CSS • JavaScript
+
+  </footer>  <script>
+
+
+    // =========================
+    // العناصر
+    // =========================
+
+    const menuButton =
+      document.getElementById(
+        "menuButton"
+      );
+
+
+    const navMenu =
+      document.getElementById(
+        "navMenu"
+      );
+
+
+    const exploreButton =
+      document.getElementById(
+        "exploreButton"
+      );
+
+
+    const startButton =
+      document.getElementById(
+        "startButton"
+      );
+
+
+    const heroCreateButton =
+      document.getElementById(
+        "heroCreateButton"
+      );
+
+
+    const bottomCreateButton =
+      document.getElementById(
+        "bottomCreateButton"
+      );
+
+
+    const occasionCards =
+      document.querySelectorAll(
+        ".occasion-card"
+      );
+
+
+
+    // =========================
+    // القائمة في الهاتف
+    // =========================
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        navMenu.classList.toggle(
+          "active"
+        );
+
+      }
+    );
+
+
+
+    // =========================
+    // استكشاف المناسبات
+    // =========================
+
+    exploreButton.addEventListener(
+      "click",
+      function () {
+
+        document
+          .getElementById(
+            "occasions"
+          )
+          .scrollIntoView({
+
+            behavior:
+              "smooth"
+
+          });
+
+      }
+    );
+
+
+
+    // =========================
+    // الانتقال إلى صفحة إنشاء البطاقة
+    // =========================
+
+    function startCreating(
+      selectedOccasion = ""
+    ) {
+
+
+      if (
+        selectedOccasion
+      ) {
+
+        localStorage.setItem(
+
+          "selectedOccasion",
+
+          selectedOccasion
+
+        );
+
+      }
+
+
+      /*
+        يجب أن يكون ملف create.html
+        في نفس المجلد مع index.html
+      */
+
+      window.location.href =
+        "./create.html";
+
+
+    }
+
+
+
+    // =========================
+    // زر الهيدر
+    // =========================
+
+    startButton.addEventListener(
+      "click",
+      function () {
+
+        startCreating();
+
+      }
+    );
+
+
+
+    // =========================
+    // زر الهيرو
+    // =========================
+
+    heroCreateButton.addEventListener(
+      "click",
+      function () {
+
+        startCreating();
+
+      }
+    );
+
+
+
+    // =========================
+    // الزر السفلي
+    // =========================
+
+    bottomCreateButton.addEventListener(
+      "click",
+      function () {
+
+        startCreating();
+
+      }
+    );
+
+
+
+    // =========================
+    // بطاقات المناسبات
+    // =========================
+
+    occasionCards.forEach(
+      function (
+        card
+      ) {
+
+
+        card.addEventListener(
+          "click",
+          function () {
+
+
+            startCreating(
+              card.dataset.occasion
+            );
+
+
+          }
+        );
+
+
+      }
+    );
+
+
+
+    // =========================
+    // إغلاق القائمة عند الضغط
+    // =========================
+
+    document
+      .querySelectorAll(
+        "nav a"
+      )
+      .forEach(
+        function (
+          link
+        ) {
+
+
+          link.addEventListener(
+            "click",
+            function () {
+
+              navMenu.classList.remove(
+                "active"
+              );
+
+            }
+          );
+
+
+        }
+      );
+
+
+  </script></body></html>
