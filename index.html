@@ -1,2338 +1,3181 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head>  <meta charset="UTF-8"><meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-«»
+<head>
 
-  <title>بطاقتي | اصنع أجمل التهاني</title>  <!-- الخط العربي -->  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >  <style>
+    <meta charset="UTF-8">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color"
+          content="#0f766e">
 
-    :root {
+    <title>
+        مصروفي | إدارة المصروفات
+    </title>
 
-      --primary: #7c3aed;
-      --primary-dark: #5b21b6;
 
-      --pink: #ec4899;
-      --blue: #2563eb;
+    <style>
 
-      --dark: #1e1b4b;
-      --text: #374151;
+        /* =====================================================
+           RESET
+        ===================================================== */
 
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        body {
 
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
 
-    body {
+            background:
+                #f5f7f9;
 
-      font-family: "Cairo", sans-serif;
+            color:
+                #1f2937;
 
-      color: var(--text);
+            min-height:
+                100vh;
+        }
 
-      overflow-x: hidden;
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
 
-      background:
+        button {
+            cursor: pointer;
+        }
 
-        linear-gradient(
-          135deg,
-          #fdf2f8 0%,
-          #f5f3ff 45%,
-          #eff6ff 100%
-        );
 
-    }
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
+        header {
 
-    /* =========================
-       الخلفية
-    ========================= */
+            background:
+                #0f766e;
 
-    .background {
+            color:
+                white;
 
-      position: fixed;
+            position:
+                sticky;
 
-      inset: 0;
+            top:
+                0;
 
-      z-index: -5;
+            z-index:
+                1000;
 
-      overflow: hidden;
+            box-shadow:
+                0 4px 20px
+                rgba(0,0,0,0.10);
+        }
 
-      pointer-events: none;
 
-    }
+        .header-container {
 
+            max-width:
+                1200px;
 
-    .blob {
+            margin:
+                auto;
 
-      position: absolute;
+            height:
+                72px;
 
-      border-radius: 50%;
+            padding:
+                0 20px;
 
-      filter: blur(20px);
+            display:
+                flex;
 
-      opacity: 0.55;
+            align-items:
+                center;
 
-      animation:
+            justify-content:
+                space-between;
+        }
 
-        floatBlob
-        10s
-        ease-in-out
-        infinite;
 
-    }
+        .logo {
 
+            display:
+                flex;
 
-    .blob-one {
+            align-items:
+                center;
 
-      width: 350px;
-      height: 350px;
+            gap:
+                12px;
+        }
 
-      background: #f9a8d4;
 
-      top: -120px;
-      right: -100px;
+        .logo-icon {
 
-    }
+            width:
+                45px;
 
+            height:
+                45px;
 
-    .blob-two {
+            background:
+                rgba(255,255,255,0.15);
 
-      width: 420px;
-      height: 420px;
+            border-radius:
+                13px;
 
-      background: #c4b5fd;
+            display:
+                flex;
 
-      bottom: -180px;
-      left: -150px;
+            align-items:
+                center;
 
-      animation-delay: 2s;
+            justify-content:
+                center;
 
-    }
+            font-size:
+                23px;
+        }
 
 
-    .blob-three {
+        .logo-text {
 
-      width: 250px;
-      height: 250px;
+            font-size:
+                21px;
 
-      background: #93c5fd;
+            font-weight:
+                bold;
+        }
 
-      top: 45%;
-      left: -120px;
 
-      animation-delay: 4s;
+        .logo-text small {
 
-    }
+            display:
+                block;
 
+            font-size:
+                11px;
 
-    @keyframes floatBlob {
+            font-weight:
+                normal;
 
-      0%,
-      100% {
+            opacity:
+                0.75;
+        }
 
-        transform:
-          translate(0, 0)
-          scale(1);
 
-      }
+        .header-date {
 
+            font-size:
+                13px;
 
-      50% {
+            opacity:
+                0.9;
+        }
 
-        transform:
-          translate(30px, -40px)
-          scale(1.1);
 
-      }
+        /* =====================================================
+           MAIN
+        ===================================================== */
 
-    }
+        main {
 
+            max-width:
+                1200px;
 
-    /* =========================
-       الهيدر
-    ========================= */
+            margin:
+                auto;
 
-    header {
+            padding:
+                35px 20px 60px;
+        }
 
-      width: min(92%, 1150px);
 
-      margin: 20px auto;
+        /* =====================================================
+           WELCOME
+        ===================================================== */
 
-      padding: 15px 20px;
+        .welcome {
 
-      display: flex;
+            margin-bottom:
+                25px;
+        }
 
-      justify-content: space-between;
 
-      align-items: center;
+        .welcome h1 {
 
-      background:
+            font-size:
+                30px;
 
-        rgba(
-          255,
-          255,
-          255,
-          0.72
-        );
+            margin-bottom:
+                5px;
+        }
 
-      backdrop-filter:
-        blur(18px);
 
-      border:
+        .welcome p {
 
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.9
-        );
+            color:
+                #6b7280;
 
-      border-radius: 24px;
+            font-size:
+                14px;
+        }
 
-      box-shadow:
 
-        0 20px 50px
-        rgba(
-          76,
-          29,
-          149,
-          0.08
-        );
+        /* =====================================================
+           STATISTICS
+        ===================================================== */
 
-      position: relative;
+        .stats {
 
-      z-index: 10;
+            display:
+                grid;
 
-    }
+            grid-template-columns:
+                repeat(3, 1fr);
 
+            gap:
+                18px;
 
-    .logo {
+            margin-bottom:
+                25px;
+        }
 
-      display: flex;
 
-      align-items: center;
+        .stat-card {
 
-      gap: 12px;
+            background:
+                white;
 
-    }
+            border-radius:
+                18px;
 
+            padding:
+                22px;
 
-    .logo-icon {
+            box-shadow:
+                0 5px 25px
+                rgba(0,0,0,0.05);
 
-      width: 52px;
-      height: 52px;
+            border:
+                1px solid #edf0f2;
 
-      border-radius: 18px;
+            position:
+                relative;
 
-      display: grid;
+            overflow:
+                hidden;
+        }
 
-      place-items: center;
 
-      font-size: 27px;
+        .stat-card::before {
 
-      background:
+            content:
+                "";
 
-        linear-gradient(
-          135deg,
-          var(--primary),
-          var(--pink)
-        );
+            position:
+                absolute;
 
-      box-shadow:
+            right:
+                0;
 
-        0 10px 25px
-        rgba(
-          124,
-          58,
-          237,
-          0.25
-        );
+            top:
+                0;
 
-    }
+            width:
+                5px;
 
+            height:
+                100%;
 
-    .logo h1 {
+            background:
+                #0f766e;
+        }
 
-      font-size: 21px;
 
-      color: var(--dark);
+        .stat-icon {
 
-      font-weight: 900;
+            width:
+                45px;
 
-    }
+            height:
+                45px;
 
+            border-radius:
+                13px;
 
-    .logo p {
+            display:
+                flex;
 
-      font-size: 11px;
+            align-items:
+                center;
 
-      color: #6b7280;
+            justify-content:
+                center;
 
-      margin-top: 2px;
+            font-size:
+                21px;
 
-    }
+            margin-bottom:
+                12px;
+        }
 
 
-    nav {
+        .income-icon {
 
-      display: flex;
+            background:
+                #dcfce7;
+        }
 
-      align-items: center;
 
-      gap: 22px;
+        .expense-icon {
 
-    }
+            background:
+                #fee2e2;
+        }
 
 
-    nav a {
+        .balance-icon {
 
-      text-decoration: none;
+            background:
+                #ccfbf1;
+        }
 
-      color: #4b5563;
 
-      font-size: 14px;
+        .stat-label {
 
-      font-weight: 700;
+            color:
+                #6b7280;
 
-      transition: 0.25s;
+            font-size:
+                13px;
 
-    }
+            margin-bottom:
+                5px;
+        }
 
 
-    nav a:hover {
+        .stat-value {
 
-      color: var(--primary);
+            font-size:
+                25px;
 
-    }
+            font-weight:
+                bold;
+        }
 
 
-    .nav-button {
+        .income-value {
 
-      border: none;
+            color:
+                #15803d;
+        }
 
-      cursor: pointer;
 
-      font-family: inherit;
+        .expense-value {
 
-      font-weight: 800;
+            color:
+                #dc2626;
+        }
 
-      padding: 11px 18px;
 
-      border-radius: 14px;
+        .balance-value {
 
-      color: white;
+            color:
+                #0f766e;
+        }
 
-      background:
 
-        linear-gradient(
-          135deg,
-          var(--primary),
-          var(--pink)
-        );
+        .currency {
 
-      box-shadow:
+            font-size:
+                13px;
 
-        0 10px 25px
-        rgba(
-          124,
-          58,
-          237,
-          0.25
-        );
+            font-weight:
+                normal;
 
-      transition: 0.3s;
+            color:
+                #6b7280;
+        }
 
-    }
 
+        /* =====================================================
+           CONTENT GRID
+        ===================================================== */
 
-    .nav-button:hover {
+        .content-grid {
 
-      transform:
-        translateY(-2px);
+            display:
+                grid;
 
-    }
+            grid-template-columns:
+                380px 1fr;
 
+            gap:
+                22px;
 
-    .menu-button {
+            align-items:
+                start;
+        }
 
-      display: none;
 
-      border: none;
+        /* =====================================================
+           FORM
+        ===================================================== */
 
-      background: transparent;
+        .panel {
 
-      font-size: 26px;
+            background:
+                white;
 
-      cursor: pointer;
+            border-radius:
+                20px;
 
-    }
+            border:
+                1px solid #edf0f2;
 
+            box-shadow:
+                0 5px 25px
+                rgba(0,0,0,0.05);
 
-    .container {
+            padding:
+                24px;
+        }
 
-      width: min(92%, 1150px);
 
-      margin: auto;
+        .panel-title {
 
-    }
+            display:
+                flex;
 
+            align-items:
+                center;
 
-    /* =========================
-       HERO
-    ========================= */
+            justify-content:
+                space-between;
 
-    .hero {
+            margin-bottom:
+                22px;
+        }
 
-      min-height: 580px;
 
-      display: grid;
+        .panel-title h2 {
 
-      grid-template-columns:
-        1fr 1fr;
+            font-size:
+                19px;
+        }
 
-      align-items: center;
 
-      gap: 40px;
+        .panel-title span {
 
-      padding:
-        50px 0
-        70px;
+            font-size:
+                22px;
+        }
 
-    }
 
+        .form-group {
 
-    .hero-text {
+            margin-bottom:
+                16px;
+        }
 
-      animation:
-        fadeUp
-        1s
-        ease;
 
-    }
+        .form-group label {
 
+            display:
+                block;
 
-    .hero-badge {
+            margin-bottom:
+                7px;
 
-      display: inline-flex;
+            font-size:
+                13px;
 
-      align-items: center;
+            font-weight:
+                bold;
 
-      gap: 8px;
+            color:
+                #374151;
+        }
 
-      padding:
-        8px 14px;
 
-      border-radius: 30px;
+        .form-group input,
+        .form-group select {
 
-      background:
+            width:
+                100%;
 
-        rgba(
-          255,
-          255,
-          255,
-          0.7
-        );
+            height:
+                47px;
 
-      color: var(--primary);
+            border:
+                1px solid #dfe3e8;
 
-      font-size: 13px;
+            border-radius:
+                11px;
 
-      font-weight: 800;
+            padding:
+                0 14px;
 
-      margin-bottom: 18px;
+            background:
+                #fafafa;
 
-    }
+            outline:
+                none;
 
+            font-size:
+                14px;
 
-    .hero h2 {
+            transition:
+                0.25s;
+        }
 
-      font-size:
-        clamp(
-          35px,
-          6vw,
-          62px
-        );
 
-      line-height: 1.35;
+        .form-group input:focus,
+        .form-group select:focus {
 
-      color: var(--dark);
+            border-color:
+                #0f766e;
 
-      font-weight: 900;
+            background:
+                white;
 
-      margin-bottom: 18px;
+            box-shadow:
+                0 0 0 3px
+                rgba(15,118,110,0.10);
+        }
 
-    }
 
+        /* =====================================================
+           TYPE BUTTONS
+        ===================================================== */
 
-    .hero h2 span {
+        .type-buttons {
 
-      background:
+            display:
+                grid;
 
-        linear-gradient(
-          135deg,
-          var(--primary),
-          var(--pink)
-        );
+            grid-template-columns:
+                1fr 1fr;
 
-      -webkit-background-clip:
-        text;
+            gap:
+                10px;
 
-      background-clip:
-        text;
+            margin-bottom:
+                18px;
+        }
 
-      color: transparent;
 
-    }
+        .type-btn {
 
+            height:
+                48px;
 
-    .hero-description {
+            border:
+                1px solid #ddd;
 
-      max-width: 560px;
+            background:
+                #fafafa;
 
-      line-height: 2;
+            border-radius:
+                11px;
 
-      font-size: 16px;
+            font-weight:
+                bold;
 
-      color: #6b7280;
+            transition:
+                0.25s;
+        }
 
-      margin-bottom: 28px;
 
-    }
+        .type-btn.active-expense {
 
+            background:
+                #fee2e2;
 
-    .hero-buttons {
+            border-color:
+                #ef4444;
 
-      display: flex;
+            color:
+                #b91c1c;
+        }
 
-      gap: 12px;
 
-      flex-wrap: wrap;
+        .type-btn.active-income {
 
-    }
+            background:
+                #dcfce7;
 
+            border-color:
+                #22c55e;
 
-    .primary-button {
+            color:
+                #15803d;
+        }
 
-      border: none;
 
-      cursor: pointer;
+        /* =====================================================
+           ADD BUTTON
+        ===================================================== */
 
-      font-family: inherit;
+        .add-btn {
 
-      font-size: 15px;
+            width:
+                100%;
 
-      font-weight: 800;
+            height:
+                50px;
 
-      padding:
-        15px 24px;
+            border:
+                none;
 
-      border-radius: 17px;
+            border-radius:
+                12px;
 
-      color: white;
+            background:
+                #0f766e;
 
-      background:
+            color:
+                white;
 
-        linear-gradient(
-          135deg,
-          var(--primary),
-          var(--pink)
-        );
+            font-size:
+                15px;
 
-      box-shadow:
+            font-weight:
+                bold;
 
-        0 15px 30px
-        rgba(
-          124,
-          58,
-          237,
-          0.25
-        );
+            transition:
+                0.25s;
+        }
 
-      transition: 0.3s;
 
-    }
+        .add-btn:hover {
 
+            background:
+                #115e59;
 
-    .primary-button:hover {
+            transform:
+                translateY(-2px);
+        }
 
-      transform:
-        translateY(-3px);
 
-    }
+        /* =====================================================
+           TRANSACTIONS
+        ===================================================== */
 
+        .transactions-header {
 
-    .secondary-button {
+            display:
+                flex;
 
-      border:
+            justify-content:
+                space-between;
 
-        1px solid
-        rgba(
-          124,
-          58,
-          237,
-          0.15
-        );
+            align-items:
+                center;
 
-      cursor: pointer;
+            gap:
+                15px;
 
-      font-family: inherit;
+            margin-bottom:
+                18px;
+        }
 
-      font-size: 15px;
 
-      font-weight: 800;
+        .transactions-header h2 {
 
-      padding:
-        15px 24px;
+            font-size:
+                19px;
+        }
 
-      border-radius: 17px;
 
-      color: var(--primary);
+        .filters {
 
-      background:
+            display:
+                flex;
 
-        rgba(
-          255,
-          255,
-          255,
-          0.75
-        );
+            gap:
+                8px;
 
-      transition: 0.3s;
+            flex-wrap:
+                wrap;
+        }
 
-    }
 
+        .search {
 
-    .secondary-button:hover {
+            height:
+                40px;
 
-      transform:
-        translateY(-3px);
+            border:
+                1px solid #ddd;
 
-      background: white;
+            border-radius:
+                10px;
 
-    }
+            padding:
+                0 12px;
 
+            outline:
+                none;
 
-    /* =========================
-       البطاقة الرئيسية
-    ========================= */
+            width:
+                180px;
 
-    .hero-card-container {
+            font-size:
+                13px;
+        }
 
-      display: flex;
 
-      justify-content: center;
+        .filter-select {
 
-      animation:
-        fadeUp
-        1.2s
-        ease;
+            height:
+                40px;
 
-    }
+            border:
+                1px solid #ddd;
 
+            border-radius:
+                10px;
 
-    .hero-card {
+            padding:
+                0 10px;
 
-      width: 100%;
+            outline:
+                none;
 
-      max-width: 420px;
+            font-size:
+                13px;
 
-      min-height: 460px;
+            background:
+                white;
+        }
 
-      border-radius: 35px;
 
-      padding: 30px;
+        /* =====================================================
+           TRANSACTION LIST
+        ===================================================== */
 
-      position: relative;
+        .transaction-list {
 
-      overflow: hidden;
+            display:
+                flex;
 
-      display: flex;
+            flex-direction:
+                column;
 
-      align-items: center;
+            gap:
+                10px;
 
-      justify-content: center;
+            max-height:
+                500px;
 
-      text-align: center;
+            overflow-y:
+                auto;
 
-      color: white;
+            padding-left:
+                3px;
+        }
 
-      background:
 
-        linear-gradient(
-          135deg,
-          #4c1d95,
-          #7c3aed,
-          #ec4899
-        );
+        .transaction {
 
-      box-shadow:
+            display:
+                flex;
 
-        0 35px 70px
-        rgba(
-          76,
-          29,
-          149,
-          0.3
-        );
+            align-items:
+                center;
 
-      transform:
-        rotate(-3deg);
+            gap:
+                12px;
 
-      transition: 0.4s;
+            padding:
+                14px;
 
-    }
+            background:
+                #fafafa;
 
+            border:
+                1px solid #f0f1f3;
 
-    .hero-card:hover {
+            border-radius:
+                13px;
 
-      transform:
+            transition:
+                0.2s;
+        }
 
-        rotate(0deg)
-        translateY(-8px);
 
-    }
+        .transaction:hover {
 
+            background:
+                #f5f7f8;
+        }
 
-    .card-circle {
 
-      position: absolute;
+        .transaction-icon {
 
-      border-radius: 50%;
+            min-width:
+                44px;
 
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.12
-        );
+            width:
+                44px;
 
-    }
+            height:
+                44px;
 
+            border-radius:
+                12px;
 
-    .circle-a {
+            display:
+                flex;
 
-      width: 250px;
-      height: 250px;
+            align-items:
+                center;
 
-      top: -120px;
-      right: -100px;
+            justify-content:
+                center;
 
-    }
+            font-size:
+                20px;
+        }
 
 
-    .circle-b {
+        .transaction.expense
+        .transaction-icon {
 
-      width: 180px;
-      height: 180px;
+            background:
+                #fee2e2;
+        }
 
-      bottom: -80px;
-      left: -70px;
 
-    }
+        .transaction.income
+        .transaction-icon {
 
+            background:
+                #dcfce7;
+        }
 
-    .hero-card-content {
 
-      position: relative;
+        .transaction-info {
 
-      z-index: 2;
+            flex:
+                1;
 
-    }
+            min-width:
+                0;
+        }
 
 
-    .big-icon {
+        .transaction-name {
 
-      font-size: 65px;
+            font-weight:
+                bold;
 
-      margin-bottom: 20px;
+            font-size:
+                14px;
 
-      animation:
+            white-space:
+                nowrap;
 
-        pulseIcon
-        3s
-        ease-in-out
-        infinite;
+            overflow:
+                hidden;
 
-    }
+            text-overflow:
+                ellipsis;
+        }
 
 
-    .hero-card h3 {
+        .transaction-category {
 
-      font-size: 20px;
+            font-size:
+                11px;
 
-      margin-bottom: 10px;
+            color:
+                #888;
 
-    }
+            margin-top:
+                2px;
+        }
 
 
-    .hero-card h4 {
+        .transaction-date {
 
-      font-size: 42px;
+            font-size:
+                10px;
 
-      font-weight: 900;
+            color:
+                #aaa;
 
-      margin-bottom: 18px;
+            margin-top:
+                2px;
+        }
 
-    }
 
+        .transaction-amount {
 
-    .hero-card p {
+            font-weight:
+                bold;
 
-      line-height: 2;
+            font-size:
+                14px;
 
-      font-size: 15px;
+            white-space:
+                nowrap;
+        }
 
-      max-width: 320px;
 
-    }
+        .transaction.expense
+        .transaction-amount {
 
+            color:
+                #dc2626;
+        }
 
-    @keyframes pulseIcon {
 
-      0%,
-      100% {
+        .transaction.income
+        .transaction-amount {
 
-        transform:
-          scale(1);
+            color:
+                #15803d;
+        }
 
-      }
 
+        .delete-btn {
 
-      50% {
+            width:
+                34px;
 
-        transform:
+            height:
+                34px;
 
-          scale(1.12)
-          rotate(5deg);
+            border:
+                none;
 
-      }
+            border-radius:
+                9px;
 
-    }
+            background:
+                #f3f4f6;
 
+            color:
+                #ef4444;
 
-    @keyframes fadeUp {
+            font-size:
+                16px;
 
-      from {
+            transition:
+                0.2s;
+        }
 
-        opacity: 0;
 
-        transform:
-          translateY(35px);
+        .delete-btn:hover {
 
-      }
+            background:
+                #fee2e2;
+        }
 
 
-      to {
+        /* =====================================================
+           EMPTY
+        ===================================================== */
 
-        opacity: 1;
+        .empty {
 
-        transform:
-          translateY(0);
+            text-align:
+                center;
 
-      }
+            padding:
+                50px 20px;
 
-    }
+            color:
+                #9ca3af;
+        }
 
 
-    /* =========================
-       الأقسام
-    ========================= */
+        .empty-icon {
 
-    .section {
+            font-size:
+                50px;
 
-      padding:
-        70px 0;
+            margin-bottom:
+                10px;
+        }
 
-    }
 
+        .empty h3 {
 
-    .section-title {
+            color:
+                #6b7280;
 
-      text-align: center;
+            margin-bottom:
+                5px;
+        }
 
-      margin-bottom: 45px;
 
-    }
+        .empty p {
 
+            font-size:
+                13px;
+        }
 
-    .section-title span {
 
-      color: var(--primary);
+        /* =====================================================
+           CHART SECTION
+        ===================================================== */
 
-      font-size: 14px;
+        .bottom-grid {
 
-      font-weight: 800;
+            display:
+                grid;
 
-    }
+            grid-template-columns:
+                1fr 1fr;
 
+            gap:
+                22px;
 
-    .section-title h2 {
+            margin-top:
+                22px;
+        }
 
-      margin-top: 8px;
 
-      font-size:
+        .chart-container {
 
-        clamp(
-          28px,
-          5vw,
-          42px
-        );
+            display:
+                flex;
 
-      color: var(--dark);
+            align-items:
+                center;
 
-      font-weight: 900;
+            justify-content:
+                center;
 
-    }
+            min-height:
+                300px;
+        }
 
 
-    .section-title p {
+        .chart {
 
-      margin-top: 12px;
+            width:
+                210px;
 
-      color: #6b7280;
+            height:
+                210px;
 
-      line-height: 2;
+            border-radius:
+                50%;
 
-    }
+            background:
+                conic-gradient(
+                    #0f766e 0deg 120deg,
+                    #f59e0b 120deg 210deg,
+                    #ef4444 210deg 280deg,
+                    #8b5cf6 280deg 360deg
+                );
 
+            position:
+                relative;
+        }
 
-    /* =========================
-       المناسبات
-    ========================= */
 
-    .occasion-grid {
+        .chart::after {
 
-      display: grid;
+            content:
+                "";
 
-      grid-template-columns:
+            position:
+                absolute;
 
-        repeat(
-          4,
-          1fr
-        );
+            width:
+                115px;
 
-      gap: 16px;
+            height:
+                115px;
 
-    }
+            background:
+                white;
 
+            border-radius:
+                50%;
 
-    .occasion-card {
+            top:
+                50%;
 
-      border: none;
+            left:
+                50%;
 
-      cursor: pointer;
+            transform:
+                translate(-50%, -50%);
+        }
 
-      font-family: inherit;
 
-      padding:
-        25px 12px;
+        .chart-center {
 
-      border-radius: 25px;
+            position:
+                absolute;
 
-      background:
+            top:
+                50%;
 
-        rgba(
-          255,
-          255,
-          255,
-          0.72
-        );
+            left:
+                50%;
 
-      border:
+            transform:
+                translate(-50%, -50%);
 
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.8
-        );
+            z-index:
+                2;
 
-      transition: 0.3s;
+            text-align:
+                center;
 
-    }
+            width:
+                100px;
+        }
 
 
-    .occasion-card:hover {
+        .chart-center strong {
 
-      transform:
+            display:
+                block;
 
-        translateY(-8px)
-        scale(1.03);
+            font-size:
+                14px;
+        }
 
-      box-shadow:
 
-        0 20px 35px
-        rgba(
-          76,
-          29,
-          149,
-          0.12
-        );
+        .chart-center span {
 
-    }
+            color:
+                #999;
 
+            font-size:
+                10px;
+        }
 
-    .occasion-emoji {
 
-      font-size: 40px;
+        .categories {
 
-      margin-bottom: 10px;
+            display:
+                flex;
 
-    }
+            flex-direction:
+                column;
 
+            gap:
+                13px;
+        }
 
-    .occasion-card h3 {
 
-      color: var(--dark);
+        .category-row {
 
-      font-size: 14px;
+            display:
+                flex;
 
-    }
+            align-items:
+                center;
 
+            justify-content:
+                space-between;
 
-    /* =========================
-       الخطوات
-    ========================= */
+            font-size:
+                13px;
+        }
 
-    .steps-grid {
 
-      display: grid;
+        .category-name {
 
-      grid-template-columns:
+            display:
+                flex;
 
-        repeat(
-          3,
-          1fr
-        );
+            align-items:
+                center;
 
-      gap: 20px;
+            gap:
+                8px;
+        }
 
-    }
 
+        .dot {
 
-    .step {
+            width:
+                11px;
 
-      padding:
-        30px 22px;
+            height:
+                11px;
 
-      border-radius: 28px;
+            border-radius:
+                50%;
+        }
 
-      background:
 
-        rgba(
-          255,
-          255,
-          255,
-          0.72
-        );
+        .dot-1 {
+            background:
+                #0f766e;
+        }
 
-      border:
 
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.9
-        );
+        .dot-2 {
+            background:
+                #f59e0b;
+        }
 
-      box-shadow:
 
-        0 15px 35px
-        rgba(
-          76,
-          29,
-          149,
-          0.06
-        );
+        .dot-3 {
+            background:
+                #ef4444;
+        }
 
-    }
 
+        .dot-4 {
+            background:
+                #8b5cf6;
+        }
 
-    .step-number {
 
-      width: 45px;
-      height: 45px;
+        /* =====================================================
+           DANGER BUTTON
+        ===================================================== */
 
-      display: grid;
+        .clear-btn {
 
-      place-items: center;
+            margin-top:
+                20px;
 
-      border-radius: 15px;
+            width:
+                100%;
 
-      margin-bottom: 18px;
+            height:
+                42px;
 
-      color: white;
+            border:
+                1px solid #fecaca;
 
-      font-weight: 900;
+            background:
+                #fff;
 
-      background:
+            color:
+                #dc2626;
 
-        linear-gradient(
-          135deg,
-          var(--primary),
-          var(--pink)
-        );
+            border-radius:
+                10px;
 
-    }
+            font-size:
+                13px;
 
+            font-weight:
+                bold;
+        }
 
-    .step h3 {
 
-      color: var(--dark);
+        .clear-btn:hover {
 
-      margin-bottom: 10px;
+            background:
+                #fef2f2;
+        }
 
-      font-size: 18px;
 
-    }
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
+        footer {
 
-    .step p {
+            background:
+                #111827;
 
-      color: #6b7280;
+            color:
+                white;
 
-      line-height: 2;
+            text-align:
+                center;
 
-      font-size: 14px;
+            padding:
+                25px 20px;
 
-    }
+            margin-top:
+                30px;
+        }
 
 
-    /* =========================
-       CTA
-    ========================= */
+        footer p {
 
-    .cta {
+            color:
+                #9ca3af;
 
-      margin:
-        30px 0
-        70px;
+            font-size:
+                12px;
+        }
 
-      padding:
-        55px 25px;
 
-      border-radius: 35px;
+        /* =====================================================
+           TOAST
+        ===================================================== */
 
-      text-align: center;
+        .toast {
 
-      color: white;
+            position:
+                fixed;
 
-      background:
+            bottom:
+                25px;
 
-        linear-gradient(
-          135deg,
-          #4c1d95,
-          #7c3aed,
-          #db2777
-        );
+            right:
+                25px;
 
-      box-shadow:
+            background:
+                #111827;
 
-        0 25px 60px
-        rgba(
-          76,
-          29,
-          149,
-          0.25
-        );
+            color:
+                white;
 
-    }
+            padding:
+                13px 18px;
 
+            border-radius:
+                11px;
 
-    .cta h2 {
+            font-size:
+                13px;
 
-      font-size:
+            z-index:
+                9999;
 
-        clamp(
-          28px,
-          5vw,
-          42px
-        );
+            opacity:
+                0;
 
-      margin-bottom: 15px;
+            transform:
+                translateY(20px);
 
-      font-weight: 900;
+            pointer-events:
+                none;
 
-    }
+            transition:
+                0.3s;
+        }
 
 
-    .cta p {
+        .toast.show {
 
-      line-height: 2;
+            opacity:
+                1;
 
-      margin-bottom: 25px;
+            transform:
+                translateY(0);
+        }
 
-    }
 
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
 
-    .cta button {
+        @media (max-width: 900px) {
 
-      border: none;
+            .content-grid {
 
-      cursor: pointer;
+                grid-template-columns:
+                    1fr;
+            }
 
-      font-family: inherit;
 
-      font-weight: 900;
+            .bottom-grid {
 
-      font-size: 15px;
+                grid-template-columns:
+                    1fr;
+            }
+        }
 
-      padding:
-        15px 25px;
 
-      border-radius: 17px;
+        @media (max-width: 650px) {
 
-      color: var(--primary);
+            .header-container {
 
-      background: white;
+                height:
+                    65px;
 
-      transition: 0.3s;
+                padding:
+                    0 15px;
+            }
 
-    }
 
+            .header-date {
 
-    .cta button:hover {
+                display:
+                    none;
+            }
 
-      transform:
 
-        translateY(-3px)
-        scale(1.03);
+            main {
 
-    }
+                padding:
+                    25px 12px 45px;
+            }
 
 
-    footer {
+            .welcome h1 {
 
-      padding:
-        25px 10px 40px;
+                font-size:
+                    25px;
+            }
 
-      text-align: center;
 
-      color: #6b7280;
+            .stats {
 
-      font-size: 13px;
+                grid-template-columns:
+                    1fr;
 
-    }
+                gap:
+                    10px;
+            }
 
 
-    /* =========================
-       الهاتف
-    ========================= */
+            .stat-card {
 
-    @media (max-width: 900px) {
+                padding:
+                    17px;
+            }
 
-      nav {
 
-        position: absolute;
+            .stat-value {
 
-        top: 80px;
+                font-size:
+                    22px;
+            }
 
-        right: 0;
-        left: 0;
 
-        padding: 20px;
+            .panel {
 
-        flex-direction: column;
+                padding:
+                    17px;
+            }
 
-        background: white;
 
-        border-radius: 20px;
+            .transactions-header {
 
-        display: none;
+                flex-direction:
+                    column;
 
-        box-shadow:
+                align-items:
+                    stretch;
+            }
 
-          0 20px 40px
-          rgba(
-            0,
-            0,
-            0,
-            0.1
-          );
 
-      }
+            .filters {
 
+                display:
+                    grid;
 
-      nav.active {
+                grid-template-columns:
+                    1fr 1fr;
+            }
 
-        display: flex;
 
-      }
+            .search {
 
+                width:
+                    100%;
 
-      .menu-button {
+                grid-column:
+                    1 / -1;
+            }
 
-        display: block;
 
-      }
+            .filter-select {
 
+                width:
+                    100%;
+            }
 
-      .nav-button {
 
-        width: 100%;
+            .transaction {
 
-      }
+                padding:
+                    11px;
 
+                gap:
+                    8px;
+            }
 
-      .hero {
 
-        grid-template-columns:
-          1fr;
+            .transaction-icon {
 
-        text-align: center;
+                min-width:
+                    39px;
 
-      }
+                width:
+                    39px;
 
+                height:
+                    39px;
+            }
 
-      .hero-description {
 
-        margin-right: auto;
+            .transaction-name {
 
-        margin-left: auto;
+                font-size:
+                    13px;
+            }
 
-      }
 
+            .transaction-amount {
 
-      .hero-buttons {
+                font-size:
+                    12px;
+            }
 
-        justify-content: center;
 
-      }
+            .delete-btn {
 
+                width:
+                    30px;
 
-      .hero-card {
+                height:
+                    30px;
+            }
 
-        transform:
-          rotate(0);
 
-      }
+            .chart {
 
+                width:
+                    180px;
 
-      .occasion-grid {
+                height:
+                    180px;
+            }
 
-        grid-template-columns:
 
-          repeat(
-            3,
-            1fr
-          );
+            .chart::after {
 
-      }
+                width:
+                    100px;
 
-    }
+                height:
+                    100px;
+            }
+        }
 
+    </style>
 
-    @media (max-width: 650px) {
+</head>
 
-      .occasion-grid {
 
-        grid-template-columns:
+<body>
 
-          repeat(
-            2,
-            1fr
-          );
 
-      }
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
+<header>
 
-      .steps-grid {
+    <div class="header-container">
 
-        grid-template-columns:
-          1fr;
+        <div class="logo">
 
-      }
+            <div class="logo-icon">
+                💰
+            </div>
 
+            <div class="logo-text">
 
-      .hero {
+                مصروفي
 
-        min-height: auto;
+                <small>
+                    إدارة أموالك بسهولة
+                </small>
 
-      }
+            </div>
 
+        </div>
 
-      .hero-card {
 
-        min-height: 400px;
+        <div
+            class="header-date"
+            id="headerDate">
+        </div>
 
-      }
+    </div>
 
+</header>
 
-      .hero-card h4 {
 
-        font-size: 35px;
 
-      }
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
-    }
+<main>
 
 
-    @media (max-width: 450px) {
+    <!-- WELCOME -->
 
-      header {
+    <div class="welcome">
 
-        padding:
-          12px 14px;
+        <h1>
+            لوحة التحكم المالية
+        </h1>
 
-      }
+        <p>
+            تابع دخلك ومصروفاتك واعرف رصيدك بسهولة.
+        </p>
 
+    </div>
 
-      .primary-button,
-      .secondary-button {
 
-        width: 100%;
 
-      }
+    <!-- =================================================
+         STATISTICS
+    ================================================= -->
 
-    }
+    <section class="stats">
 
-  </style></head><body>  <!-- الخلفية -->  <div class="background"><div class="blob blob-one"></div>
 
-<div class="blob blob-two"></div>
+        <div class="stat-card">
 
-<div class="blob blob-three"></div>
+            <div class="stat-icon income-icon">
+                📈
+            </div>
 
-  </div>  <!-- الهيدر -->  <header><div class="logo">
+            <div class="stat-label">
+                إجمالي الدخل
+            </div>
 
+            <div
+                class="stat-value income-value"
+                id="totalIncome">
 
-  <div class="logo-icon">
-    💌
-  </div>
+                0
 
+                <span class="currency">
+                    جنيه
+                </span>
 
-  <div>
+            </div>
 
-    <h1>
-      بطاقتي
-    </h1>
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon expense-icon">
+                📉
+            </div>
+
+            <div class="stat-label">
+                إجمالي المصروفات
+            </div>
+
+            <div
+                class="stat-value expense-value"
+                id="totalExpense">
+
+                0
+
+                <span class="currency">
+                    جنيه
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon balance-icon">
+                💵
+            </div>
+
+            <div class="stat-label">
+                الرصيد الحالي
+            </div>
+
+            <div
+                class="stat-value balance-value"
+                id="totalBalance">
+
+                0
+
+                <span class="currency">
+                    جنيه
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTENT
+    ================================================= -->
+
+    <div class="content-grid">
+
+
+        <!-- =================================================
+             ADD TRANSACTION
+        ================================================= -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+
+                <h2>
+                    إضافة عملية جديدة
+                </h2>
+
+                <span>
+                    ➕
+                </span>
+
+            </div>
+
+
+
+            <!-- TYPE -->
+
+            <div class="form-group">
+
+                <label>
+                    نوع العملية
+                </label>
+
+
+                <div class="type-buttons">
+
+
+                    <button
+                        class="type-btn active-expense"
+                        id="expenseBtn"
+                        onclick="setType('expense')">
+
+                        📉 مصروف
+
+                    </button>
+
+
+                    <button
+                        class="type-btn"
+                        id="incomeBtn"
+                        onclick="setType('income')">
+
+                        📈 دخل
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    اسم العملية
+                </label>
+
+                <input
+                    type="text"
+                    id="transactionName"
+                    placeholder="مثال: شراء كتب">
+
+            </div>
+
+
+
+            <!-- AMOUNT -->
+
+            <div class="form-group">
+
+                <label>
+                    المبلغ
+                </label>
+
+                <input
+                    type="number"
+                    id="transactionAmount"
+                    placeholder="مثال: 500"
+                    min="0">
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-group">
+
+                <label>
+                    التصنيف
+                </label>
+
+                <select id="transactionCategory">
+
+                    <option value="طعام">
+                        🍔 طعام
+                    </option>
+
+                    <option value="مواصلات">
+                        🚗 مواصلات
+                    </option>
+
+                    <option value="دراسة">
+                        📚 دراسة
+                    </option>
+
+                    <option value="تسوق">
+                        🛍️ تسوق
+                    </option>
+
+                    <option value="فواتير">
+                        🧾 فواتير
+                    </option>
+
+                    <option value="صحة">
+                        🏥 صحة
+                    </option>
+
+                    <option value="ترفيه">
+                        🎮 ترفيه
+                    </option>
+
+                    <option value="راتب">
+                        💼 راتب
+                    </option>
+
+                    <option value="أخرى">
+                        📦 أخرى
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="form-group">
+
+                <label>
+                    التاريخ
+                </label>
+
+                <input
+                    type="date"
+                    id="transactionDate">
+
+            </div>
+
+
+
+            <!-- ADD -->
+
+            <button
+                class="add-btn"
+                onclick="addTransaction()">
+
+                ➕ إضافة العملية
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             TRANSACTIONS
+        ================================================= -->
+
+        <section class="panel">
+
+
+            <div class="transactions-header">
+
+                <h2>
+                    العمليات الأخيرة
+                </h2>
+
+
+                <div class="filters">
+
+                    <input
+                        type="text"
+                        class="search"
+                        id="searchInput"
+                        placeholder="🔍 بحث..."
+                        oninput="renderTransactions()">
+
+
+                    <select
+                        class="filter-select"
+                        id="filterType"
+                        onchange="renderTransactions()">
+
+                        <option value="all">
+                            الكل
+                        </option>
+
+                        <option value="income">
+                            الدخل
+                        </option>
+
+                        <option value="expense">
+                            المصروفات
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        class="filter-select"
+                        id="filterCategory"
+                        onchange="renderTransactions()">
+
+                        <option value="all">
+                            كل التصنيفات
+                        </option>
+
+                        <option value="طعام">
+                            طعام
+                        </option>
+
+                        <option value="مواصلات">
+                            مواصلات
+                        </option>
+
+                        <option value="دراسة">
+                            دراسة
+                        </option>
+
+                        <option value="تسوق">
+                            تسوق
+                        </option>
+
+                        <option value="فواتير">
+                            فواتير
+                        </option>
+
+                        <option value="صحة">
+                            صحة
+                        </option>
+
+                        <option value="ترفيه">
+                            ترفيه
+                        </option>
+
+                        <option value="راتب">
+                            راتب
+                        </option>
+
+                        <option value="أخرى">
+                            أخرى
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="transaction-list"
+                id="transactionList">
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CHARTS
+    ================================================= -->
+
+    <div class="bottom-grid">
+
+
+        <!-- CHART -->
+
+        <section class="panel">
+
+            <div class="panel-title">
+
+                <h2>
+                    توزيع المصروفات
+                </h2>
+
+                <span>
+                    📊
+                </span>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <div
+                    class="chart"
+                    id="expenseChart">
+
+                    <div class="chart-center">
+
+                        <strong
+                            id="chartTotal">
+
+                            0
+
+                        </strong>
+
+                        <span>
+                            إجمالي المصروف
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CATEGORIES -->
+
+        <section class="panel">
+
+            <div class="panel-title">
+
+                <h2>
+                    التصنيفات
+                </h2>
+
+                <span>
+                    📋
+                </span>
+
+            </div>
+
+
+            <div
+                class="categories"
+                id="categories">
+
+            </div>
+
+
+            <button
+                class="clear-btn"
+                onclick="clearAll()">
+
+                🗑️ حذف جميع العمليات
+
+            </button>
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
 
     <p>
-      اصنع تهنئة لا تُنسى
+        💰 مصروفي — نظم أموالك وراقب مصروفاتك
     </p>
 
-  </div>
+    <p style="margin-top:6px;">
+        جميع البيانات محفوظة على جهازك فقط
+    </p>
 
+</footer>
+
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast">
+
+    تم تنفيذ العملية ✓
 
 </div>
 
 
 
-<button
-  class="menu-button"
-  id="menuButton"
-  type="button"
->
-  ☰
-</button>
+<script>
 
+/* =====================================================
+   VARIABLES
+===================================================== */
 
+let transactions =
+    JSON.parse(
+        localStorage.getItem(
+            "myExpenses"
+        )
+    ) || [];
 
-<nav id="navMenu">
 
+let currentType =
+    "expense";
 
-  <a href="#home">
-    الرئيسية
-  </a>
 
+/* =====================================================
+   ELEMENTS
+===================================================== */
 
-  <a href="#occasions">
-    المناسبات
-  </a>
+const nameInput =
+    document.getElementById(
+        "transactionName"
+    );
 
+const amountInput =
+    document.getElementById(
+        "transactionAmount"
+    );
 
-  <a href="#how">
-    كيف يعمل؟
-  </a>
+const categoryInput =
+    document.getElementById(
+        "transactionCategory"
+    );
 
+const dateInput =
+    document.getElementById(
+        "transactionDate"
+    );
 
-  <a href="#about">
-    عن الموقع
-  </a>
+const transactionList =
+    document.getElementById(
+        "transactionList"
+    );
 
+const toast =
+    document.getElementById(
+        "toast"
+    );
 
-  <button
-    class="nav-button"
-    id="startButton"
-    type="button"
-  >
-    ✨ أنشئ بطاقتك
-  </button>
 
+/* =====================================================
+   DATE
+===================================================== */
 
-</nav>
+const today =
+    new Date();
 
-  </header>  <main
-    class="container"
-    id="home"
-  ><!-- HERO -->
+const year =
+    today.getFullYear();
 
-<section class="hero">
+const month =
+    String(
+        today.getMonth() + 1
+    ).padStart(2,"0");
 
+const day =
+    String(
+        today.getDate()
+    ).padStart(2,"0");
 
-  <div class="hero-text">
 
+dateInput.value =
+    `${year}-${month}-${day}`;
 
-    <div class="hero-badge">
-      ✨ اصنع لحظة جميلة لمن تحب
-    </div>
 
+/* =====================================================
+   HEADER DATE
+===================================================== */
 
-    <h2>
+const headerDate =
+    document.getElementById(
+        "headerDate"
+    );
 
-      لأن الكلمات الجميلة
-      تستحق
-      <span>
-        بطاقة جميلة
-      </span>
-      ❤️
 
-    </h2>
+headerDate.textContent =
+    today.toLocaleDateString(
+        "ar-EG",
+        {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
 
 
-    <p class="hero-description">
+/* =====================================================
+   SET TYPE
+===================================================== */
 
-      أنشئ بطاقة تهنئة خاصة بك بسهولة،
-      اختر المناسبة واكتب كلماتك الجميلة
-      ثم خصص بطاقتك بصورة وتصميم مميز.
+function setType(type) {
 
-    </p>
+    currentType =
+        type;
 
 
-    <div class="hero-buttons">
-
-
-      <button
-        class="primary-button"
-        id="heroCreateButton"
-        type="button"
-      >
-
-        💌 أنشئ بطاقتي الآن
-
-      </button>
-
-
-      <button
-        class="secondary-button"
-        id="exploreButton"
-        type="button"
-      >
-
-        🎨 استكشف المناسبات
-
-      </button>
-
-
-    </div>
-
-
-  </div>
-
-
-
-  <div class="hero-card-container">
-
-
-    <div class="hero-card">
-
-
-      <div
-        class="card-circle circle-a"
-      ></div>
-
-
-      <div
-        class="card-circle circle-b"
-      ></div>
-
-
-      <div class="hero-card-content">
-
-
-        <div class="big-icon">
-          🎉
-        </div>
-
-
-        <h3>
-          تهنئة خاصة إلى
-        </h3>
-
-
-        <h4>
-          شخص مميز ❤️
-        </h4>
-
-
-        <p>
-
-          لأن وجودك في حياتنا جميل،
-          نتمنى لك أياماً مليئة بالسعادة
-          والفرح وتحقيق الأمنيات.
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- المناسبات -->
-
-<section
-  class="section"
-  id="occasions"
->
-
-
-  <div class="section-title">
-
-
-    <span>
-      🎊 اختر مناسبتك
-    </span>
-
-
-    <h2>
-      لكل مناسبة بطاقة مميزة
-    </h2>
-
-
-    <p>
-      اختر المناسبة التي تريد إنشاء بطاقة لها
-    </p>
-
-
-  </div>
-
-
-
-  <div class="occasion-grid">
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="birthday"
-    >
-
-      <div class="occasion-emoji">
-        🎂
-      </div>
-
-      <h3>
-        عيد ميلاد
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="graduation"
-    >
-
-      <div class="occasion-emoji">
-        🎓
-      </div>
-
-      <h3>
-        تخرج
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="success"
-    >
-
-      <div class="occasion-emoji">
-        🌟
-      </div>
-
-      <h3>
-        نجاح
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="wedding"
-    >
-
-      <div class="occasion-emoji">
-        💍
-      </div>
-
-      <h3>
-        زواج
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="engagement"
-    >
-
-      <div class="occasion-emoji">
-        💎
-      </div>
-
-      <h3>
-        خطوبة
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="anniversary"
-    >
-
-      <div class="occasion-emoji">
-        🥰
-      </div>
-
-      <h3>
-        ذكرى سنوية
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="newbaby"
-    >
-
-      <div class="occasion-emoji">
-        👶
-      </div>
-
-      <h3>
-        مولود جديد
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="newyear"
-    >
-
-      <div class="occasion-emoji">
-        🎆
-      </div>
-
-      <h3>
-        رأس السنة
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="eid"
-    >
-
-      <div class="occasion-emoji">
-        🌙
-      </div>
-
-      <h3>
-        عيد مبارك
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="ramadan"
-    >
-
-      <div class="occasion-emoji">
-        🕌
-      </div>
-
-      <h3>
-        رمضان كريم
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="mother"
-    >
-
-      <div class="occasion-emoji">
-        🌷
-      </div>
-
-      <h3>
-        عيد الأم
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="father"
-    >
-
-      <div class="occasion-emoji">
-        💙
-      </div>
-
-      <h3>
-        عيد الأب
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="love"
-    >
-
-      <div class="occasion-emoji">
-        ❤️
-      </div>
-
-      <h3>
-        حب ورومانسية
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="thanks"
-    >
-
-      <div class="occasion-emoji">
-        🙏
-      </div>
-
-      <h3>
-        شكر وتقدير
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="getwell"
-    >
-
-      <div class="occasion-emoji">
-        🌹
-      </div>
-
-      <h3>
-        سلامتك
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="welcome"
-    >
-
-      <div class="occasion-emoji">
-        🎈
-      </div>
-
-      <h3>
-        ترحيب
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="farewell"
-    >
-
-      <div class="occasion-emoji">
-        ✈️
-      </div>
-
-      <h3>
-        وداع وسفر
-      </h3>
-
-    </button>
-
-
-
-    <button
-      class="occasion-card"
-      type="button"
-      data-occasion="special"
-    >
-
-      <div class="occasion-emoji">
-        💖
-      </div>
-
-      <h3>
-        تهنئة خاصة
-      </h3>
-
-    </button>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- كيف يعمل -->
-
-<section
-  class="section"
-  id="how"
->
-
-
-  <div class="section-title">
-
-
-    <span>
-      ✨ خطوات بسيطة
-    </span>
-
-
-    <h2>
-      اصنع بطاقتك في دقائق
-    </h2>
-
-
-  </div>
-
-
-
-  <div class="steps-grid">
-
-
-    <div class="step">
-
-
-      <div class="step-number">
-        ١
-      </div>
-
-
-      <h3>
-        اختر المناسبة
-      </h3>
-
-
-      <p>
-        اختر نوع المناسبة التي تريد إنشاء تهنئة خاصة لها.
-      </p>
-
-
-    </div>
-
-
-
-    <div class="step">
-
-
-      <div class="step-number">
-        ٢
-      </div>
-
-
-      <h3>
-        اكتب وخصص
-      </h3>
-
-
-      <p>
-        أضف الاسم والرسالة واختر التصميم المناسب لبطاقتك.
-      </p>
-
-
-    </div>
-
-
-
-    <div class="step">
-
-
-      <div class="step-number">
-        ٣
-      </div>
-
-
-      <h3>
-        احفظ وشارك
-      </h3>
-
-
-      <p>
-        احفظ البطاقة كصورة وشاركها مع من تحب.
-      </p>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- CTA -->
-
-<section
-  class="cta"
-  id="about"
->
-
-
-  <h2>
-    جاهزة لصنع أول بطاقة؟ 💌
-  </h2>
-
-
-  <p>
-    اجعل كلماتك الجميلة أكثر تميزاً
-    مع بطاقة مصممة خصيصاً لك.
-  </p>
-
-
-  <button
-    type="button"
-    id="bottomCreateButton"
-  >
-    ✨ ابدأ الآن
-  </button>
-
-
-</section>
-
-  </main>  <footer>صُنع بكل ❤️ باستخدام HTML • CSS • JavaScript
-
-  </footer>  <script>
-
-
-    // =========================
-    // العناصر
-    // =========================
-
-    const menuButton =
-      document.getElementById(
-        "menuButton"
-      );
-
-
-    const navMenu =
-      document.getElementById(
-        "navMenu"
-      );
-
-
-    const exploreButton =
-      document.getElementById(
-        "exploreButton"
-      );
-
-
-    const startButton =
-      document.getElementById(
-        "startButton"
-      );
-
-
-    const heroCreateButton =
-      document.getElementById(
-        "heroCreateButton"
-      );
-
-
-    const bottomCreateButton =
-      document.getElementById(
-        "bottomCreateButton"
-      );
-
-
-    const occasionCards =
-      document.querySelectorAll(
-        ".occasion-card"
-      );
-
-
-
-    // =========================
-    // القائمة في الهاتف
-    // =========================
-
-    menuButton.addEventListener(
-      "click",
-      function () {
-
-        navMenu.classList.toggle(
-          "active"
+    const expenseBtn =
+        document.getElementById(
+            "expenseBtn"
         );
 
-      }
+    const incomeBtn =
+        document.getElementById(
+            "incomeBtn"
+        );
+
+
+    expenseBtn.classList.remove(
+        "active-expense"
+    );
+
+    incomeBtn.classList.remove(
+        "active-income"
     );
 
 
-
-    // =========================
-    // استكشاف المناسبات
-    // =========================
-
-    exploreButton.addEventListener(
-      "click",
-      function () {
-
-        document
-          .getElementById(
-            "occasions"
-          )
-          .scrollIntoView({
-
-            behavior:
-              "smooth"
-
-          });
-
-      }
-    );
-
-
-
-    // =========================
-    // الانتقال إلى صفحة إنشاء البطاقة
-    // =========================
-
-    function startCreating(
-      selectedOccasion = ""
+    if (
+        type === "expense"
     ) {
 
-
-      if (
-        selectedOccasion
-      ) {
-
-        localStorage.setItem(
-
-          "selectedOccasion",
-
-          selectedOccasion
-
+        expenseBtn.classList.add(
+            "active-expense"
         );
 
-      }
+    } else {
 
-
-      /*
-        يجب أن يكون ملف create.html
-        في نفس المجلد مع index.html
-      */
-
-      window.location.href =
-        "./create.html";
-
+        incomeBtn.classList.add(
+            "active-income"
+        );
 
     }
 
+}
 
 
-    // =========================
-    // زر الهيدر
-    // =========================
+/* =====================================================
+   ADD TRANSACTION
+===================================================== */
 
-    startButton.addEventListener(
-      "click",
-      function () {
+function addTransaction() {
 
-        startCreating();
+    const name =
+        nameInput.value.trim();
 
-      }
+    const amount =
+        Number(
+            amountInput.value
+        );
+
+    const category =
+        categoryInput.value;
+
+    const date =
+        dateInput.value;
+
+
+    if (!name) {
+
+        showToast(
+            "⚠️ اكتب اسم العملية"
+        );
+
+        nameInput.focus();
+
+        return;
+    }
+
+
+    if (
+        !amount ||
+        amount <= 0
+    ) {
+
+        showToast(
+            "⚠️ أدخل مبلغًا صحيحًا"
+        );
+
+        amountInput.focus();
+
+        return;
+    }
+
+
+    const transaction = {
+
+        id:
+            Date.now(),
+
+        name:
+            name,
+
+        amount:
+            amount,
+
+        category:
+            category,
+
+        date:
+            date,
+
+        type:
+            currentType
+
+    };
+
+
+    transactions.unshift(
+        transaction
     );
 
 
+    saveData();
 
-    // =========================
-    // زر الهيرو
-    // =========================
+    renderAll();
 
-    heroCreateButton.addEventListener(
-      "click",
-      function () {
 
-        startCreating();
+    nameInput.value =
+        "";
 
-      }
+    amountInput.value =
+        "";
+
+
+    showToast(
+        currentType === "expense"
+        ? "تمت إضافة المصروف ✓"
+        : "تمت إضافة الدخل ✓"
     );
 
+}
 
 
-    // =========================
-    // الزر السفلي
-    // =========================
+/* =====================================================
+   SAVE
+===================================================== */
 
-    bottomCreateButton.addEventListener(
-      "click",
-      function () {
+function saveData() {
 
-        startCreating();
-
-      }
+    localStorage.setItem(
+        "myExpenses",
+        JSON.stringify(
+            transactions
+        )
     );
 
+}
 
 
-    // =========================
-    // بطاقات المناسبات
-    // =========================
+/* =====================================================
+   DELETE
+===================================================== */
 
-    occasionCards.forEach(
-      function (
-        card
-      ) {
+function deleteTransaction(id) {
 
-
-        card.addEventListener(
-          "click",
-          function () {
-
-
-            startCreating(
-              card.dataset.occasion
-            );
-
-
-          }
+    const confirmed =
+        confirm(
+            "هل تريد حذف هذه العملية؟"
         );
 
 
-      }
+    if (!confirmed) {
+        return;
+    }
+
+
+    transactions =
+        transactions.filter(
+            item =>
+                item.id !== id
+        );
+
+
+    saveData();
+
+    renderAll();
+
+    showToast(
+        "تم حذف العملية"
+    );
+
+}
+
+
+/* =====================================================
+   RENDER TRANSACTIONS
+===================================================== */
+
+function renderTransactions() {
+
+    const search =
+        document
+            .getElementById(
+                "searchInput"
+            )
+            .value
+            .trim()
+            .toLowerCase();
+
+
+    const filterType =
+        document
+            .getElementById(
+                "filterType"
+            )
+            .value;
+
+
+    const filterCategory =
+        document
+            .getElementById(
+                "filterCategory"
+            )
+            .value;
+
+
+    let filtered =
+        transactions.filter(
+            transaction => {
+
+                const matchesSearch =
+                    transaction.name
+                        .toLowerCase()
+                        .includes(search);
+
+
+                const matchesType =
+                    filterType === "all" ||
+                    transaction.type === filterType;
+
+
+                const matchesCategory =
+                    filterCategory === "all" ||
+                    transaction.category === filterCategory;
+
+
+                return (
+                    matchesSearch &&
+                    matchesType &&
+                    matchesCategory
+                );
+
+            }
+        );
+
+
+    if (
+        filtered.length === 0
+    ) {
+
+        transactionList.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    📭
+                </div>
+
+                <h3>
+                    لا توجد عمليات
+                </h3>
+
+                <p>
+                    أضف أول عملية مالية لك
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    transactionList.innerHTML =
+        filtered
+        .map(
+            transaction =>
+                createTransactionHTML(
+                    transaction
+                )
+        )
+        .join("");
+
+}
+
+
+/* =====================================================
+   CREATE TRANSACTION HTML
+===================================================== */
+
+function createTransactionHTML(
+    transaction
+) {
+
+    const isIncome =
+        transaction.type === "income";
+
+
+    const icon =
+        getCategoryIcon(
+            transaction.category,
+            transaction.type
+        );
+
+
+    const sign =
+        isIncome
+        ? "+"
+        : "-";
+
+
+    const formattedAmount =
+        Number(
+            transaction.amount
+        ).toLocaleString(
+            "ar-EG"
+        );
+
+
+    const formattedDate =
+        formatDate(
+            transaction.date
+        );
+
+
+    return `
+
+        <div
+            class="transaction ${transaction.type}">
+
+            <div class="transaction-icon">
+                ${icon}
+            </div>
+
+
+            <div class="transaction-info">
+
+                <div class="transaction-name">
+                    ${escapeHTML(
+                        transaction.name
+                    )}
+                </div>
+
+                <div class="transaction-category">
+                    ${escapeHTML(
+                        transaction.category
+                    )}
+                </div>
+
+                <div class="transaction-date">
+                    ${formattedDate}
+                </div>
+
+            </div>
+
+
+            <div class="transaction-amount">
+
+                ${sign}
+                ${formattedAmount}
+
+            </div>
+
+
+            <button
+                class="delete-btn"
+                onclick="deleteTransaction(${transaction.id})"
+                title="حذف">
+
+                🗑️
+
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+===================================================== */
+
+function getCategoryIcon(
+    category,
+    type
+) {
+
+    if (
+        type === "income"
+    ) {
+
+        if (
+            category === "راتب"
+        ) {
+            return "💼";
+        }
+
+        return "💵";
+    }
+
+
+    const icons = {
+
+        "طعام":
+            "🍔",
+
+        "مواصلات":
+            "🚗",
+
+        "دراسة":
+            "📚",
+
+        "تسوق":
+            "🛍️",
+
+        "فواتير":
+            "🧾",
+
+        "صحة":
+            "🏥",
+
+        "ترفيه":
+            "🎮",
+
+        "راتب":
+            "💼",
+
+        "أخرى":
+            "📦"
+
+    };
+
+
+    return (
+        icons[category] ||
+        "💸"
+    );
+
+}
+
+
+/* =====================================================
+   FORMAT DATE
+===================================================== */
+
+function formatDate(date) {
+
+    if (!date) {
+        return "";
+    }
+
+
+    const parts =
+        date.split("-");
+
+
+    if (
+        parts.length !== 3
+    ) {
+        return date;
+    }
+
+
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
+
+}
+
+
+/* =====================================================
+   UPDATE STATS
+===================================================== */
+
+function updateStats() {
+
+    let income =
+        0;
+
+    let expense =
+        0;
+
+
+    transactions.forEach(
+        transaction => {
+
+            if (
+                transaction.type ===
+                "income"
+            ) {
+
+                income +=
+                    Number(
+                        transaction.amount
+                    );
+
+            } else {
+
+                expense +=
+                    Number(
+                        transaction.amount
+                    );
+
+            }
+
+        }
     );
 
 
-
-    // =========================
-    // إغلاق القائمة عند الضغط
-    // =========================
-
-    document
-      .querySelectorAll(
-        "nav a"
-      )
-      .forEach(
-        function (
-          link
-        ) {
+    const balance =
+        income - expense;
 
 
-          link.addEventListener(
-            "click",
-            function () {
+    document.getElementById(
+        "totalIncome"
+    ).innerHTML = `
 
-              navMenu.classList.remove(
-                "active"
-              );
+        ${income.toLocaleString("ar-EG")}
 
-            }
-          );
+        <span class="currency">
+            جنيه
+        </span>
 
+    `;
+
+
+    document.getElementById(
+        "totalExpense"
+    ).innerHTML = `
+
+        ${expense.toLocaleString("ar-EG")}
+
+        <span class="currency">
+            جنيه
+        </span>
+
+    `;
+
+
+    document.getElementById(
+        "totalBalance"
+    ).innerHTML = `
+
+        ${balance.toLocaleString("ar-EG")}
+
+        <span class="currency">
+            جنيه
+        </span>
+
+    `;
+
+
+    document.getElementById(
+        "chartTotal"
+    ).textContent =
+        expense.toLocaleString(
+            "ar-EG"
+        );
+
+}
+
+
+/* =====================================================
+   UPDATE CATEGORIES
+===================================================== */
+
+function updateCategories() {
+
+    const categoryNames = [
+
+        "طعام",
+        "مواصلات",
+        "دراسة",
+        "تسوق"
+
+    ];
+
+
+    const colors = [
+
+        "dot-1",
+        "dot-2",
+        "dot-3",
+        "dot-4"
+
+    ];
+
+
+    const expenseTransactions =
+        transactions.filter(
+            item =>
+                item.type ===
+                "expense"
+        );
+
+
+    const totals =
+        {};
+
+
+    categoryNames.forEach(
+        category => {
+
+            totals[category] =
+                0;
 
         }
-      );
+    );
 
 
-  </script></body></html>
+    expenseTransactions.forEach(
+        item => {
+
+            if (
+                totals[
+                    item.category
+                ] !== undefined
+            ) {
+
+                totals[
+                    item.category
+                ] +=
+                    Number(
+                        item.amount
+                    );
+
+            }
+
+        }
+    );
+
+
+    const categories =
+        document.getElementById(
+            "categories"
+        );
+
+
+    categories.innerHTML =
+        categoryNames
+        .map(
+            (category,index) => `
+
+                <div class="category-row">
+
+                    <div class="category-name">
+
+                        <span
+                            class="dot ${colors[index]}">
+                        </span>
+
+                        ${category}
+
+                    </div>
+
+                    <strong>
+
+                        ${totals[
+                            category
+                        ].toLocaleString("ar-EG")}
+
+                        جنيه
+
+                    </strong>
+
+                </div>
+
+            `
+        )
+        .join("");
+
+}
+
+
+/* =====================================================
+   UPDATE CHART
+===================================================== */
+
+function updateChart() {
+
+    const categoryNames = [
+
+        "طعام",
+        "مواصلات",
+        "دراسة",
+        "تسوق"
+
+    ];
+
+
+    const chartColors = [
+
+        "#0f766e",
+        "#f59e0b",
+        "#ef4444",
+        "#8b5cf6"
+
+    ];
+
+
+    const values =
+        categoryNames.map(
+            category => {
+
+                return transactions
+                    .filter(
+                        item =>
+                            item.type ===
+                            "expense" &&
+                            item.category ===
+                            category
+                    )
+                    .reduce(
+                        (sum,item) =>
+                            sum +
+                            Number(
+                                item.amount
+                            ),
+                        0
+                    );
+
+            }
+        );
+
+
+    const total =
+        values.reduce(
+            (sum,value) =>
+                sum + value,
+            0
+        );
+
+
+    const chart =
+        document.getElementById(
+            "expenseChart"
+        );
+
+
+    if (
+        total === 0
+    ) {
+
+        chart.style.background =
+            "#e5e7eb";
+
+        return;
+    }
+
+
+    let currentDegree =
+        0;
+
+
+    const parts =
+        values.map(
+            (value,index) => {
+
+                const degree =
+                    (
+                        value /
+                        total
+                    ) * 360;
+
+
+                const start =
+                    currentDegree;
+
+
+                const end =
+                    currentDegree +
+                    degree;
+
+
+                currentDegree =
+                    end;
+
+
+                return `
+                    ${chartColors[index]}
+                    ${start}deg
+                    ${end}deg
+                `;
+
+            }
+        );
+
+
+    chart.style.background =
+        `conic-gradient(${parts.join(",")})`;
+
+}
+
+
+/* =====================================================
+   RENDER ALL
+===================================================== */
+
+function renderAll() {
+
+    updateStats();
+
+    renderTransactions();
+
+    updateCategories();
+
+    updateChart();
+
+}
+
+
+/* =====================================================
+   CLEAR ALL
+===================================================== */
+
+function clearAll() {
+
+    if (
+        transactions.length === 0
+    ) {
+
+        showToast(
+            "لا توجد بيانات لحذفها"
+        );
+
+        return;
+    }
+
+
+    const confirmed =
+        confirm(
+            "⚠️ سيتم حذف جميع العمليات نهائيًا. هل أنت متأكد؟"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    transactions =
+        [];
+
+
+    saveData();
+
+    renderAll();
+
+
+    showToast(
+        "تم حذف جميع البيانات"
+    );
+
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function showToast(message) {
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        2500
+    );
+
+}
+
+
+/* =====================================================
+   INITIAL RENDER
+===================================================== */
+
+renderAll();
+
+</script>
+
+
+</body>
+
+</html>
